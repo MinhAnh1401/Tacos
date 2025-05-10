@@ -22,7 +22,7 @@
         android:theme="@style/Theme.Tacos"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".view_model.LoginActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
             <intent-filter>
@@ -31,15 +31,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".RegisterActivity"/>
-        <activity android:name=".SuccessRegisterActivity"/>
-        <activity android:name=".ChangeUserNameActivity"/>
-        <activity android:name=".ChangePhoneActivity"/>
-        <activity android:name=".ChangePasscodeActivity"/>
-        <activity android:name=".WelcomeNewUserActivity"/>
-        <activity android:name=".EnterCurrentBalanceActivity"/>
-        <activity android:name=".ReportActivity"/>
+        <activity android:name=".view_model.MainActivity"/>
+        <activity android:name=".view_model.RegisterActivity"/>
+        <activity android:name=".view_model.SuccessRegisterActivity"/>
+        <activity android:name=".view_model.ChangeUserNameActivity"/>
+        <activity android:name=".view_model.ChangePhoneActivity"/>
+        <activity android:name=".view_model.ChangePasscodeActivity"/>
+        <activity android:name=".view_model.WelcomeNewUserActivity"/>
+        <activity android:name=".view_model.EnterCurrentBalanceActivity"/>
+        <activity android:name=".view_model.ReportActivity"/>
     </application>
 
 </manifest>
