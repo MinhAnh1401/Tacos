@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/register"
+    android:background="@drawable/background_app">
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingHorizontal="15dp"
+            android:gravity="center"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:fontFamily="@font/sf_pro"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/user_name"
+                android:src="@drawable/ic_avatar"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15dp"
+                android:autofillHints=""
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/phone"
+                android:src="@drawable/ic_phone"/>
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15dp"
+                android:maxLength="10"
+                android:autofillHints=""
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/passcode"
+                android:src="@drawable/ic_key"/>
+
+            <EditText
+                android:id="@+id/et_passcode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15dp"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:maxLength="6"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:hint="@string/register_passcode"
+                android:inputType="numberPassword"
+                android:textSize="16sp"/>
+
+            <CheckBox
+                android:id="@+id/cb_show_passcode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/passcode"
+                android:src="@drawable/ic_key"/>
+
+            <EditText
+                android:id="@+id/et_passcode_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="15dp"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                android:maxLength="6"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:hint="@string/confirm_passcode"
+                android:inputType="numberPassword"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:fontFamily="@font/sf_pro"
+            android:text="@string/register"
+            android:backgroundTint="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"
+            android:fontFamily="@font/sf_pro"
+            android:text="@string/cancel"
+            android:backgroundTint="#646464"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/tv_hello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/sf_pro"
+                    android:gravity="end"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowRadius="10"
+                    android:text="Hello"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/tv_full_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:fontFamily="@font/sf_pro"
+                    android:text="Full day"
+                    android:textColor="#646464"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_location"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvWeather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:fontFamily="@font/sf_pro"
+                        android:textColor="#000000"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/dark_widget"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/user_name"
+                        android:src="@drawable/ic_avatar"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:fontFamily="@font/sf_pro"
+                        android:text="@string/user_name"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/light_widget"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:fontFamily="@font/sf_pro"
+                        android:text="@string/balance"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_amount_total_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:fontFamily="@font/sf_pro"
+                        android:text="@string/amount_total_balance"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/dark_widget"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_report_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/report_this_month"
+                        android:src="@drawable/ic_report" />
+
+                    <TextView
+                        android:id="@+id/tv_report_this_month"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/report_this_month"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_this_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bottom_widget"
+                        android:fontFamily="@font/sf_pro"
+                        android:paddingHorizontal="10dp"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowRadius="10"
+                        android:text="@string/mm"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_expense_icon"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/expense"
+                                android:src="@drawable/ic_expense"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <ImageView
+                                android:id="@+id/iv_income_icon"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/income"
+                                android:src="@drawable/ic_income" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_amount_total_spent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="center"
+                                android:text="@string/total_spent_month"
+                                android:textColor="#640000"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_amount_total_income"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="center"
+                                android:text="@string/total_income_month"
+                                android:textColor="#006400"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/tv_no_transactions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="@font/sf_pro"
+                        android:paddingHorizontal="10dp"
+                        android:text="You haven't made any transactions for this month yet."
+                        android:textColor="#646464"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/pc_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="250dp"
+                            android:layout_weight="1" />
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/pc_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="250dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/dark_widget"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/exchange_rate_icon"
+                        android:src="@drawable/ic_exchange_rate"/>
+
+                    <TextView
+                        android:id="@+id/tvBaseCurrency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:paddingHorizontal="10dp"
+                        android:text="@string/exchange_rates_for_usd"
+                        android:fontFamily="@font/sf_pro"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_exchange_rate_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bottom_widget"
+                        android:fontFamily="@font/sf_pro"
+                        android:gravity="end"
+                        android:paddingHorizontal="10dp"
+                        android:shadowColor="#FFFFFF"
+                        android:shadowRadius="10"
+                        android:text="@string/yyyy_mm_dd"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="TextContrastCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="@drawable/light_widget"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvExchangeRates"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Scroll icon"
+                        android:src="@drawable/ic_scroll"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:paddingTop="5dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/top_expenses"
+                    android:src="@drawable/ic_top_spending"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:fontFamily="@font/sf_pro"
+                    android:text="@string/top_expenses"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_no_expense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/sf_pro"
+                android:text="You haven't made any expense transactions yet."
+                android:textColor="#646464"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_top_expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_this_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@drawable/dark_widget"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/top_spending_of_this_week"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/light_widget"
+                            android:orientation="vertical">
+
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                tools:ignore="UselessParent">
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/high_light">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_1_spending"
+                                        android:src="@drawable/ic_top1"
+                                        tools:ignore="TooDeepLayout,ImageContrastCheck" />
+
+                                    <TextView
+                                        android:id="@+id/tv_top1_spending_week"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:gravity="center"
+                                        android:text="@string/tuition"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_top1_spending_amount_week"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingHorizontal="10dp"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/top1_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_2_spending"
+                                        android:src="@drawable/ic_top2"
+                                        tools:ignore="ImageContrastCheck" />
+
+                                    <TextView
+                                        android:id="@+id/tv_top2_spending_week"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:text="@string/rent"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top2_spending_amount_week"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/top2_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_3_spending"
+                                        android:src="@drawable/ic_top3"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top3_spending_week"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/food"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top3_spending_amount_week"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/tv_top3_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_this_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/dark_widget"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/top_spending_of_this_month"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@drawable/light_widget"
+                            android:orientation="vertical">
+
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                tools:ignore="UselessParent">
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/high_light">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_1_spending"
+                                        android:src="@drawable/ic_top1"
+                                        tools:ignore="ImageContrastCheck" />
+
+                                    <TextView
+                                        android:id="@+id/tv_top1_spending_month"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/tuition"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top1_spending_amount_month"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/top1_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_2_spending"
+                                        android:src="@drawable/ic_top2"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top2_spending_month"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/rent"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top2_spending_amount_month"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/top2_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_3_spending"
+                                        android:src="@drawable/ic_top3"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top3_spending_month"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/food"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top3_spending_amount_month"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/tv_top3_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_this_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/dark_widget"
+                        android:orientation="vertical"
+                        tools:ignore="TooManyViews">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/top_spending_of_this_year"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_widget"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                tools:ignore="TooManyViews,UselessParent">
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/high_light">
+
+                                    <ImageView
+                                        android:layout_width="44dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_1_spending"
+                                        android:src="@drawable/ic_top1"
+                                        tools:ignore="ImageContrastCheck" />
+
+                                    <TextView
+                                        android:id="@+id/tv_top1_spending_year"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/tuition"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top1_spending_amount_year"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/top1_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_2_spending"
+                                        android:src="@drawable/ic_top2"
+                                        tools:ignore="ImageContrastCheck" />
+
+                                    <TextView
+                                        android:id="@+id/tv_top2_spending_year"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/rent"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top2_spending_amount_year"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:gravity="center"
+                                        android:text="@string/top2_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp"/>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="@string/top_3_spending"
+                                        android:src="@drawable/ic_top3"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top3_spending_year"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/food"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_top3_spending_amount_year"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingHorizontal="10dp"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/sf_pro"
+                                        android:text="@string/tv_top3_spending_amount_week"
+                                        android:textColor="#640000"
+                                        android:textSize="16sp" />
+                                </TableRow>
+                            </TableLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="150dp"
+                android:background="@drawable/dark_widget"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/recent_transactions"
+                        android:src="@drawable/ic_transaction"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:fontFamily="@font/sf_pro"
+                        android:text="@string/recent_transactions"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        tools:ignore="UselessParent">
+
+                        <TableRow
+                            android:id="@+id/tr_recent_transaction_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/dark_widget"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_recent_transaction_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:gravity="start"
+                                    android:shadowColor="#FFFFFF"
+                                    android:shadowRadius="10"
+                                    android:text="@string/tuition"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/tv_dt_recent_transaction_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:gravity="start"
+                                    android:shadowColor="#FFFFFF"
+                                    android:shadowRadius="10"
+                                    android:text="@string/date_and_time"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_note_recent_transaction_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:shadowColor="#FFFFFF"
+                                android:shadowRadius="10"
+                                android:text="@string/note"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/tv_recent_transaction_1_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="end"
+                                android:paddingHorizontal="10dp"
+                                android:shadowColor="#FFFFFF"
+                                android:shadowRadius="10"
+                                android:text="@string/recent_transaction_1_amount"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_recent_transaction_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/dark_widget"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_recent_transaction_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:gravity="start"
+                                    android:shadowColor="#FFFFFF"
+                                    android:shadowRadius="10"
+                                    android:text="@string/tuition"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/tv_dt_recent_transaction_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:gravity="start"
+                                    android:shadowColor="#FFFFFF"
+                                    android:shadowRadius="10"
+                                    android:text="@string/date_and_time"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_note_recent_transaction_2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:shadowColor="#FFFFFF"
+                                android:shadowRadius="10"
+                                android:text="@string/note"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/tv_recent_transaction_2_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="end"
+                                android:paddingHorizontal="10dp"
+                                android:shadowColor="#FFFFFF"
+                                android:shadowRadius="10"
+                                android:text="@string/recent_transaction_1_amount"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/tr_recent_transaction_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/dark_widget"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_recent_transaction_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:gravity="start"
+                                    android:shadowColor="#FFFFFF"
+                                    android:shadowRadius="10"
+                                    android:text="@string/tuition"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/tv_dt_recent_transaction_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:gravity="start"
+                                    android:shadowColor="#FFFFFF"
+                                    android:shadowRadius="10"
+                                    android:text="@string/date_and_time"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_note_recent_transaction_3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="center"
+                                android:paddingHorizontal="10dp"
+                                android:shadowColor="#FFFFFF"
+                                android:shadowRadius="10"
+                                android:text="@string/note"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/tv_recent_transaction_3_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/sf_pro"
+                                android:gravity="end"
+                                android:paddingHorizontal="10dp"
+                                android:shadowColor="#FFFFFF"
+                                android:shadowRadius="10"
+                                android:text="@string/recent_transaction_1_amount"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:ignore="TextContrastCheck" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

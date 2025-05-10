@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ll_top_bar_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_open_budget_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#9696FF"
+            android:fontFamily="@font/sf_pro"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="10"
+            android:text="@string/new_budget"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_create_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/ll_top_bar_budget"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/icon_of_amount"
+                android:src="@drawable/ic_amount"/>
+
+            <EditText
+                android:id="@+id/et_add_amount_budget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingHorizontal="15dp"
+                android:autofillHints=""
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:hint="@string/amount"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"/>
+
+            <ImageButton
+                android:id="@+id/ib_clear_budget"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_delete"
+                android:contentDescription="@string/to_clear_amount" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="5dp"
+            android:background="@drawable/background_edit_text">
+
+            <ImageView
+                android:id="@+id/iv_add_category_budget"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/icon_of_category"
+                android:src="@drawable/ic_category"/>
+
+            <TextView
+                android:id="@+id/tv_add_category_budget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingHorizontal="15dp"
+                android:fontFamily="@font/sf_pro"
+                android:textSize="16sp"
+                android:hint="@string/select_category"
+                android:background="@android:color/transparent"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:id="@+id/iv_extend_budget"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/to_extend_category"
+                android:src="@drawable/ic_extend" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout_budget"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:visibility="gone"
+                        android:background="@drawable/background_edit_text"
+                        app:tabTextColor="#000000" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_category_type_budget"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="5dp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/background_edit_text">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                tools:ignore="UselessParent">
+
+                                <RadioButton
+                                    android:id="@+id/rb_expense_budget"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingHorizontal="15dp"
+                                    android:gravity="center"
+                                    android:text="@string/expense"
+                                    android:textColor="#640000"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:buttonTint="#640000" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_income_budget"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingHorizontal="15dp"
+                                    android:gravity="center"
+                                    android:text="@string/income"
+                                    android:textColor="#006400"
+                                    android:fontFamily="@font/sf_pro"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:buttonTint="#006400" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/background_edit_text"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/icon_of_category"
+                                android:src="@drawable/ic_category" />
+
+                            <EditText
+                                android:id="@+id/et_category_name_budget"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:autofillHints="category"
+                                android:inputType="text"
+                                android:paddingHorizontal="15dp"
+                                android:background="@android:color/transparent"
+                                android:hint="@string/category_name"
+                                android:textColor="#000000"
+                                android:fontFamily="@font/sf_pro"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_create_category_budget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="15dp"
+                            android:text="@string/create"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="@font/sf_pro"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:backgroundTint="#000000"
+                            android:shadowColor="#FFFFFF"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="10"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_plus_budget"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/to_open_create_category_form"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_plus"/>
+
+                    <ImageView
+                        android:id="@+id/iv_minus_budget"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/to_close_create_category_form"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_minus"/>
+                </LinearLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager_budget"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/icon_of_note"
+                android:src="@drawable/ic_note"/>
+
+            <EditText
+                android:id="@+id/et_add_note_budget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingHorizontal="15dp"
+                android:autofillHints=""
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:hint="@string/note"
+                android:inputType="text"
+                android:textSize="16sp"/>
+
+            <ImageButton
+                android:id="@+id/ib_clear_note_budget"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_delete"
+                android:contentDescription="@string/to_clear_note" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_edit_text"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/icon_calendar"
+                android:src="@drawable/ic_calendar"/>
+
+            <EditText
+                android:id="@+id/et_add_end_date_budget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                android:gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:inputType="date"
+                android:paddingHorizontal="5dp"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@drawable/background_edit_text_highlight"
+                android:focusable="false"
+                android:clickable="true"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/et_add_end_time_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                android:gravity="center"
+                android:layout_marginEnd="5dp"
+                android:inputType="time"
+                android:paddingHorizontal="5dp"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@drawable/background_edit_text_highlight"
+                android:focusable="false"
+                android:clickable="true"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/et_add_frequency_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                android:gravity="center"
+                android:inputType="text"
+                android:paddingHorizontal="5dp"
+                android:fontFamily="@font/sf_pro"
+                android:textColor="#000000"
+                android:background="@drawable/background_edit_text_highlight"
+                android:focusable="false"
+                android:clickable="true"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_create_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="10"
+            android:fontFamily="@font/sf_pro"
+            android:text="@string/create"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_overview_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dark_widget"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ll_create_budget"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/iv_icon_budget"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/icon_of_budget"
+                android:src="@drawable/ic_budgets"/>
+
+            <TextView
+                android:id="@+id/tv_title_total_budgets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_pro"
+                android:paddingHorizontal="10dp"
+                android:text="@string/total_budgets"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_amount_total_budgets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sf_pro"
+                android:paddingHorizontal="10dp"
+                android:text="@string/amount_total_balance"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/light_widget"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_pro"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/income_budget"
+                    android:textColor="#006400"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_income_budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_pro"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/amount_total_balance"
+                    android:textColor="#006400"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_pro"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/expense_budget"
+                    android:textColor="#640000"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_expense_budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_pro"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/amount_total_balance"
+                    android:textColor="#640000"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_data_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="@font/sf_pro"
+        android:gravity="center"
+        android:text="You haven't set up any budgets yet."
+        android:textColor="#646464"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/ll_overview_budget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_budget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="150dp"
+        android:paddingHorizontal="20dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/ll_overview_budget"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

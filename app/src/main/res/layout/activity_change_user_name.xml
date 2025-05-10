@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/change_user_name"
+    android:background="@drawable/background_app">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_title_change_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/change_name"
+                android:fontFamily="@font/sf_pro"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_edit_text"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/user_name"
+                    android:src="@drawable/ic_avatar"/>
+
+                <EditText
+                    android:id="@+id/et_new_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="15dp"
+                    android:autofillHints=""
+                    android:fontFamily="@font/sf_pro"
+                    android:textColor="#000000"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/new_name"
+                    android:inputType="text"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/background_edit_text"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/passcode"
+                    android:src="@drawable/ic_key"/>
+
+                <EditText
+                    android:id="@+id/et_require_passcode_edit_username"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="15dp"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:fontFamily="@font/sf_pro"
+                    android:textColor="#000000"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/passcode"
+                    android:inputType="numberPassword"
+                    android:textSize="16sp"/>
+
+                <CheckBox
+                    android:id="@+id/cb_show_require_passcode_edit_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm_edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                android:fontFamily="@font/sf_pro"
+                android:text="@string/confirm"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_cancel_edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#646464"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                android:fontFamily="@font/sf_pro"
+                android:text="@string/cancel"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

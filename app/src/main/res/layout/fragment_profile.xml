@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/avatar_username"
+                    android:src="@drawable/ic_avatar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables,UselessParent">
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:gravity="center"
+                            android:paddingHorizontal="15dp"
+                            android:shadowColor="#FFFFFF"
+                            android:shadowDx="0"
+                            android:shadowDy="0"
+                            android:shadowRadius="10"
+                            android:text="@string/user_name"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            tools:ignore="TextContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/iv_change_user_name"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/to_edit"
+                            android:src="@drawable/ic_note"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/dark_widget"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_personal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sf_pro"
+                        android:text="@string/personal"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/light_widget"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_phone"
+                            android:src="@drawable/ic_phone"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sf_pro"
+                            android:paddingHorizontal="10dp"
+                            android:text="@string/phone"
+                            android:textColor="#000000"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/phone_number"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+
+                        <ImageView
+                            android:id="@+id/iv_change_phone"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/to_edit"
+                            android:src="@drawable/ic_edit"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_calendar"
+                            android:src="@drawable/ic_calendar"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/creation_date"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/tv_creation_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:paddingHorizontal="10dp"
+                            android:text="@string/yyyy_mm_dd"
+                            android:textColor="#000000"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_time"
+                            android:src="@drawable/ic_time"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/total_days_active"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/tv_active_account_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/active_date"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/dark_widget"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="10dp"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/sf_pro"
+                        android:text="@string/account"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/light_widget"
+                    android:baselineAligned="false"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_current_balance"
+                            android:src="@drawable/ic_amount"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/balance"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/tv_total_balance_all_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/amount_total_balance"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_expense"
+                            android:src="@drawable/ic_expense" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sf_pro"
+                            android:paddingHorizontal="10dp"
+                            android:text="@string/total_amount_expense"
+                            android:textColor="#640000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_total_expense_all_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:gravity="end"
+                            android:paddingHorizontal="10dp"
+                            android:text="@string/amount_expense"
+                            android:textColor="#640000"
+                            android:textSize="16sp"
+                            tools:ignore="NestedWeights" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_income"
+                            android:src="@drawable/ic_income"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/total_amount_income"
+                            android:textColor="#006400"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_total_income_all_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sf_pro"
+                            android:gravity="end"
+                            android:paddingHorizontal="10dp"
+                            android:text="@string/amount_income"
+                            android:textColor="#006400"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_transaction_count"
+                            android:src="@drawable/ic_transaction_count"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/transactions_count"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/tv_total_transactions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/number"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_transaction_expense_count"
+                            android:src="@drawable/ic_transaction_expense"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/total_transaction_expense_count"
+                            android:textSize="16sp"
+                            android:textColor="#640000"/>
+
+                        <TextView
+                            android:id="@+id/tv_total_transactions_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/number"
+                            android:textSize="16sp"
+                            android:textColor="#640000"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/icon_of_transaction_income_count"
+                            android:src="@drawable/ic_transaction_income"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/total_transaction_income_count"
+                            android:textSize="16sp"
+                            android:textColor="#006400"/>
+
+                        <TextView
+                            android:id="@+id/tv_total_transactions_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="end"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/sf_pro"
+                            android:text="@string/number"
+                            android:textSize="16sp"
+                            android:textColor="#006400"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_change_passcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sf_pro"
+                android:text="@string/change_passcode"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                android:textStyle="bold"
+                android:backgroundTint="#646464"/>
+
+            <Button
+                android:id="@+id/btn_reset_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sf_pro"
+                android:text="@string/reset_account"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                android:textStyle="bold"
+                android:backgroundTint="#000000"/>
+
+            <Button
+                android:id="@+id/btn_delete_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="150dp"
+                android:fontFamily="@font/sf_pro"
+                android:text="@string/delete_account"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                android:textStyle="bold"
+                android:backgroundTint="#640000"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

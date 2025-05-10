@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/tv_title_edit_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/sf_pro"
+        android:gravity="center"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="10"
+        android:text="@string/edit_transaction"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextCategory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/sf_pro"
+            android:hint="@string/enter_new_category"
+            android:inputType="text"
+            android:paddingHorizontal="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:background="@drawable/background_edit_text">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_of_amount_light"
+            android:src="@drawable/ic_amount"/>
+
+        <EditText
+            android:id="@+id/editTextAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro"
+            android:hint="@string/enter_new_amount"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/background_edit_text"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_of_note"
+            android:src="@drawable/ic_note"/>
+
+        <EditText
+            android:id="@+id/editTextNote"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro"
+            android:hint="@string/note"
+            android:inputType="text"
+            android:paddingHorizontal="10dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/background_edit_text">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/icon_of_calendar_light"
+            android:src="@drawable/ic_calendar"
+            tools:ignore="ImageContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="2"
+            android:autofillHints=""
+            android:background="@drawable/background_edit_text_highlight"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/sf_pro"
+            android:gravity="center"
+            android:hint="@string/new_transaction_date"
+            android:inputType="date"
+            android:paddingHorizontal="10dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/background_edit_text_highlight"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/sf_pro"
+            android:gravity="center"
+            android:hint="@string/new_transaction_time"
+            android:inputType="time"
+            android:paddingHorizontal="10dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/update"
+        android:fontFamily="@font/sf_pro"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="10"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/cancel"
+        android:fontFamily="@font/sf_pro"
+        android:backgroundTint="#646464"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="10"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
+</LinearLayout>
